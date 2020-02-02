@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DDDDDD"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="#DDDDDD"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/cursorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="cursorBtnOnClick"
+                app:srcCompat="@drawable/cursor" />
+
+            <ImageButton
+                android:id="@+id/eraserBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="eraserBtnOnClick"
+                app:srcCompat="@drawable/eraser" />
+
+            <ImageButton
+                android:id="@+id/circleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="circleBtnOnClick"
+                app:srcCompat="@drawable/circle" />
+
+            <ImageButton
+                android:id="@+id/rectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="rectBtnOnClick"
+                app:srcCompat="@drawable/rect" />
+
+            <ImageButton
+                android:id="@+id/lineBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="lineBtnOnClick"
+                app:srcCompat="@drawable/line" />
+
+            <Button
+                android:id="@+id/blueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#00ACC1"
+                android:onClick="blueBtnOnClick" />
+
+            <Button
+                android:id="@+id/yellowBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FDD835"
+                android:onClick="yellowBtnOnClick" />
+
+            <Button
+                android:id="@+id/redBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#E53935"
+                android:onClick="redBtnOnClick" />
+
+            <ImageButton
+                android:id="@+id/shareBtn"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#FFFFFF"
+                app:srcCompat="@drawable/share" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="890dp"
+            android:layout_height="match_parent"
+            android:background="#DDDDDD">
+
+            <FrameLayout
+                android:layout_width="800dp"
+                android:layout_height="800dp"
+                android:background="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.638"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.example.jsketch.SketchPadView
+                    android:id="@+id/sketchPadView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#00FFFFFF" />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
